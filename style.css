@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* 16px = 1rem */
+  font-size: 62.5%; /* This is a game changer, as 1 rem will be now 10px */
+  /* any number in px/10, with this :root, will be the number of rem */
+  /* For example: 10px = 1rem */
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #ece9fd;
+
+  padding: 6rem 2.3rem 6.6rem;
+  font-size: 1.6rem;
+
+  font-family: "Epilogue";
+}
+
+main {
+  max-width: 33rem;
+  margin: 0 auto; /* It aligns the design at the center of the display */
+}
+
+h1 {
+  font-size: 4rem; /* 1 rem will be 10px */
+  line-height: 4.8rem;
+
+  color: #090039;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+main p:first-child {
+  color: #7158ef;
+  line-height: 3.2rem;
+  letter-spacing: 3px; /* When it is less than 4px, or a small quantity of px,
+  there is no necessity of changing it to rem, because it can change
+  the defined design */
+  text-transform: uppercase;
+
+  margin-bottom: 1.7rem;
+}
+
+h1 + p {
+  /* The p that does have a h1 before him */
+  color: rgba(10, 0, 57, 0.64);
+  line-height: 3.2rem;
+
+  margin-bottom: 3.2rem;
+}
+
+a {
+  text-decoration: none;
+  line-height: 3.2rem;
+  color: #090039;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
+}
+
+ul li {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #090039;
+
+  max-width: 25.7rem;
+  display: flex;
+  gap: 3.8rem
+}
+
+ul li+li { /* Every li that does have a li before it, and is inside the ul */
+  margin-top: 3.2rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8rem;
+
+  letter-spacing: -2px;
+  color: #090039;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  body {
+    padding-top: 8rem;
+  }
+  main {
+    display: flex;
+    gap: 10rem;
+    max-width: 1020px;
+  }
+  main > div { /* Refering to the first div */
+    max-width: 484px;
+  }
+
+  ul li{
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
+}
